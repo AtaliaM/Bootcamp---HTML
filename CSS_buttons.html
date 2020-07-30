@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        * {
+            font-family: Verdana;  
+        }
+
+        body {
+            background-color: #334660;
+            max-width: 960px;
+            margin: auto;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            color: white;
+        }
+
+        .flat {
+            display: inline-block;
+        }
+        .round {
+            display: inline-block;
+        }
+
+
+        /*full colored buttons*/
+        .greenbutton {
+            background-color: #01DD77;
+            color:white;
+            border:none;
+            }
+        
+        .redbutton{
+            background-color: #FB2324;
+            color:white;
+            border:none;
+            }
+        .bluebutton{
+            background-color: #0075B8;
+            color:white;
+            border:none;
+            }
+
+        .orangebutton{
+            background-color: #F57900;
+            color:white;
+            border:none;
+            }
+        .yellowbutton{
+            background-color: rgb(170, 170, 20);
+            color:white;
+            border:none;
+            }
+        .greybutton{
+            background-color: #7E8C8F;
+            color:white;
+            border:none;
+            }
+
+        .full-btn button:hover {
+            opacity: 0.8;
+            }
+
+
+        /*ghosts buttons*/
+        .greengohstbutton {
+            display: inline;
+        }
+        .redghostbutton {
+            display: inline;
+        }
+        .bluegohstbutton {
+            display: inline;
+        }
+
+        .orangegohsbutton {
+            display: inline;
+        }
+
+        .yellowghostbutton {
+            display: inline;
+        }
+
+        .greyghostbutton {
+            display: inline;
+        }
+
+
+        .greenframebutton{
+            background-color: transparent;
+            color:white;
+            border: 2px solid #01DD77;
+        }
+        .greengohstbutton button:hover {
+            background-color: #01DD77;
+        }
+        .redframebutton {
+            background-color: transparent;
+            color:white;
+            border: 2px solid #FB2324;
+        }
+        .redghostbutton button:hover {
+            background-color:#FB2324;
+        }
+
+        .blueframebutton {
+            background-color: transparent;
+            color:white;
+            border: 2px solid #0075B8;
+        }
+
+        .bluegohstbutton button:hover {
+            background-color: #0075B8;
+        }
+
+
+        .orangeframebutton {
+            background-color: transparent;
+            color:white;
+            border: 2px solid #F57900;
+        }
+
+        .orangegohsbutton button:hover{
+            background-color: #F57900;
+        }
+
+
+        .yellowframebutton {
+            background-color: transparent;
+            color:white;
+            border: 2px solid rgb(170, 170, 20);
+        }
+
+        .yellowghostbutton button:hover {
+            background-color: rgb(170, 170, 20);
+        }
+
+
+        .greyframebutton{
+            background-color: transparent;
+            color:white;
+            border: 2px solid #7E8C8F;
+        }
+
+       .greyghostbutton button:hover {
+           background-color: #7E8C8F;
+       }
+
+
+        .big {
+            
+            padding: 10px 50px;
+            margin-bottom: 5px;
+            margin-right: 15px;
+        }
+
+        .middle {
+            
+            padding: 10px 30px;
+            margin-right: 15px;
+        }
+
+        .small {
+            
+            padding: 6px 15px;
+        }
+
+        .round button{
+            border-radius: 10px;
+        }
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="full-btn">
+        <p>Flat</p>
+        <div class="flat">
+            <button class="greenbutton big">Register</button>
+            <button class="redbutton middle">Clear</button>
+            <button class="bluebutton small">Submit</button>
+        </div>
+        <p>Round</p>
+        <div class="round">
+            <button class="orangebutton big">Register</button>
+            <button class="yellowbutton middle">Clear</button>
+            <button class="greybutton small">Submit</button>
+        </div>
+    </div>
+        <p>Ghost Flat</p>
+        <div class="flat">
+            <div class="greengohstbutton">
+                <button class="greenframebutton big">Register</button>
+            </div>
+            <div class="redghostbutton">
+                <button class="redframebutton middle redgohstbutton">Clear</button>
+            </div>
+            <div class="bluegohstbutton">
+                <button class="blueframebutton small blueghostbutton">Submit</button>
+            </div>
+        </div>
+        <p>Ghost Round</p>
+        <div class="round">
+            <div class="orangegohsbutton">
+                <button class="orangeframebutton big orangeghostbutton">Register</button>
+            </div>
+            <div class="yellowghostbutton">
+                <button class="yellowframebutton middle yellowghostbutton">Clear</button>
+            </div>
+            <div class="greyghostbutton">
+                <button class="greyframebutton small greyghostbutton">Submit</button>
+            </div>
+        
+    </div>
+    
+</body>
+</html>
