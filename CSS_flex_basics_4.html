@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basics 4</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            width:100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .flex-container {
+            
+            background: beige;
+            display: flex;
+            flex-direction: column;
+            height: 50vh;
+            align-items: flex-start;
+            justify-content: space-around;
+
+        }
+
+        .item-1 {
+            background: green;
+            
+        }
+
+        .item-2 {
+            background: blue;
+        }
+
+        .item-3 {
+            background: red;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+
+        <div class="item item-1"><h5>1</h5></div>
+        <div class="item item-2"><h5>2</h5></div>
+        <div class="item item-3"><h5>3</h5></div>
+
+    </div>
+</body>
+</html>

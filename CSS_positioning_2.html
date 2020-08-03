@@ -7,18 +7,26 @@
 
 <style>
 
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
     #outer {
         width: 100px;
         height: 100px;
         background: darkcyan;
         margin: 50px;
-        
     }
 
+
     #box-title {
-        font-size: 18px;
+        font-size: 18px;  
+    }
+
+    .space {
         position: relative;
-        padding-bottom: 10px;
     }
 
 
@@ -27,7 +35,7 @@
         height: 50px;
         background: lightgreen;
         position: absolute;
-        margin-top: 10px; /*for space above*/
+        top:10px;
         
     }
 </style>
@@ -35,7 +43,8 @@
 </head>
 <body>
     <div id="outer">
-        <div id="box-title">Box Title
+        <div id="box-title">Box Title</div>
+        <div class="space">
             <div id="inner"></div>
         </div>
     </div>

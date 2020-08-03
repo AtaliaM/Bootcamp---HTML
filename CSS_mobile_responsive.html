@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Responsive</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .column {
+            
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 15px;
+            width:250px;
+            height: fit-content;
+            color:white;
+            background: black;
+        }
+
+       .column-one {
+        display:inline-block;
+       }
+       .column-two {
+        display:inline-block;
+       }
+       .column-three {
+        display:inline-block;
+       }
+       .column-four {
+        display:inline-block;
+       }
+
+
+        @media (max-width: 501px)
+        {
+            .column {
+                
+                display:block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="column column-one">
+        <h2>First item</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perferendis soluta harum molestiae officiis eos vitae rem quas temporibus! Architecto similique sequi consectetur, rerum ducimus mollitia eos ipsam. 
+            Aliquid molestias repellat nobis obcaecati tempore ab aperiam quaerat, saepe doloremque aspernatur soluta enim? Necessitatibus, 
+            adipisci eum sequi optio fugit officiis tempora.</p>
+    </div>
+   
+    
+    <div class="column column-two">
+        <h2>Second item</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perferendis soluta harum molestiae officiis eos vitae rem quas temporibus! Architecto similique sequi consectetur, rerum ducimus mollitia eos ipsam. Aliquid molestias repellat nobis obcaecati tempore ab aperiam quaerat, saepe doloremque aspernatur soluta enim? Necessitatibus, 
+            adipisci eum sequi optio fugit officiis tempora.</p>
+    </div>
+    
+    
+    <div class="column column-three">
+        <h2>Third item</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perferendis soluta harum molestiae officiis eos vitae rem quas temporibus! Architecto similique sequi consectetur, rerum ducimus mollitia eos ipsam. Aliquid molestias repellat nobis obcaecati tempore ab aperiam quaerat, saepe doloremque aspernatur soluta enim? Necessitatibus, 
+            adipisci eum sequi optio fugit officiis tempora.</p>
+    </div>
+    
+    
+    <div class="column column-four">
+        <h2>Fourth item</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perferendis soluta harum molestiae officiis eos vitae rem quas temporibus! Architecto similique sequi consectetur, rerum ducimus mollitia eos ipsam. Aliquid molestias repellat nobis obcaecati tempore ab aperiam quaerat, saepe doloremque aspernatur soluta enim? Necessitatibus, 
+            adipisci eum sequi optio fugit officiis tempora.</p>
+        </div>
+    
+</body>
+</html>
