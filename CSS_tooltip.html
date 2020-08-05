@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+
+    <style>
+
+    .body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        max-width: 100vw;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    p {
+        width: 50%;
+        margin: auto;
+        line-height: 1.6;
+        }
+
+    a {
+        position: relative;
+        text-decoration: none;
+        color: red;
+        }
+
+    a[data-tooltip]:hover::before {
+        background-color: darkgrey;
+        content: attr(data-tooltip); /*attr(data-tooltip) makes it reusable code*/
+        position: absolute;
+        top: -25px;
+        padding: 2px 2px;
+        border-radius: 2px;
+        font-size: 12px;
+        color: brown;
+        width: max-content;
+    }
+
+
+    a[data-tooltip]:hover::after {
+        content:'';
+        position: absolute;
+        top:-2px;
+        left:8px;
+        border-right: transparent 4px solid;
+        border-left: transparent 4px solid;
+        border-top: darkgrey 9px solid;
+        
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tooltip:</h1>
+        <p>Lorem ipsum dolor sit <a data-tooltip= "amet is great!" href="#"> amet</a>, consectetur adipisicing elit. Consectetur voluptatibus sequi aspernatur omnis. Non eligendi dolores quasi corporis excepturi magni,
+            iusto nemo ipsa sunt eaque dolorum libero, 
+            veniam id maxime incidunt quas consequuntur autem voluptas voluptatibus fugit cumque. Minima, sed delectus? Quibusdam maxime recusandae cupiditate odit officiis magnam, 
+            asperiores at? Quasi ratione, 
+            perferendis alias numquam exercitationem molestiae
+            earum fugiat ducimus doloremque? Rerum nulla mollitia aliquam ipsum non modi doloribus, minus fuga vero, obcaecati possimus distinctio! Aut, ipsum quibusdam! 
+            Odit repellat asperiores <a data-tooltip="I don't know what ipsa is" href="#">ipsa</a> nam dolores deserunt. Magni veritatis officia dicta 
+            ipsum saepe, quaerat error fugiat itaque quod beatae, explicabo sapiente alias.
+        </p>
+    </div>
+    
+</body>
+</html>

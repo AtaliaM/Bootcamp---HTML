@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttons</title>
+
+    <style>
+
+        body {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 30px;
+            height: 80px;
+            width: 200px;
+            border: 1px solid black;
+            text-decoration: none;
+            color:black;
+        }
+
+
+        .translateY {
+           
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .translateY::before {
+            content:"YEAH";
+            position:absolute;
+            top:0;
+            left:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%; /*100% of the parent, translateY*/
+            width: 100%;
+            transform: translateY(-100%); /*100% before parent*/
+            background: red;
+            transition: all 0.3s;
+        }
+
+        .translateY:hover::before{
+            transform: translateY(0);
+        }
+
+        .translateX {
+            overflow: hidden;
+            transition: color 1s;
+        }
+
+        .translateX::before {
+            content: "translateX";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%; /*100% of the parent, translateX*/
+            width: 100%;
+            transform: translateX(-100%); /*100% before parent*/
+            background: black;
+            transition: all 0.1s;
+            z-index: -1; /*the color of the before:hover will be in front*/
+        }
+
+        .translateX:hover::before {
+            transform: translateX(0);
+        }
+
+        .translateX:hover {
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <a class="btn translateY" href="#">TranslateY</a>
+    <a class="btn translateX" href="#">TranslateX</a>
+</body>
+</html>
