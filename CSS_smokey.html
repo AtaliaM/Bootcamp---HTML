@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <title>Smokey Animation</title>
+
+    <style>
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 80px;
+            font-family: 'Rowdies', cursive;            
+            background: url(./Images/photo-1564951434112-64d74cc2a2d7.jpg) center center/cover;
+            color:black;
+            height: 100vh;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: black 2px dotted;
+            height: 300px;
+            width: 500px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        ul:hover li {
+            transform: rotate(45deg) translateY(-90px);
+            filter:blur(10px);
+            opacity: 0;
+        }
+
+        li {
+            transition: all 1s;
+        }
+
+        li:nth-child(2) {
+            transition-delay: 0.50s;
+        }
+        li:nth-child(3) {
+            transition-delay: 0.80s;
+        }
+        li:nth-child(4) {
+            transition-delay: 1.2s;
+        }
+        li:nth-child(5) {
+            transition-delay: 1.6s;
+        }
+        li:nth-child(6) {
+            transition-delay: 2s;
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+        <ul>
+            <li>A</li>
+            <li>T</li>
+            <li>A</li>
+            <li>L</li>
+            <li>I</li>
+            <li>A</li>
+        </ul>
+    </div>
+</body>
+</html>

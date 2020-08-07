@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Protfolio - Web developer">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
     <title>Atalia Mucharsky - Protfopli</title>
 
     <style>
+
+        :root {
+            --primary-color: rgb(185, 140, 178);
+            --primary-color-opt-2: lavender;
+            --secondary-color: rgb(128, 54, 128);
+            --links-colors: black;
+            --primary-font-color: rgb(110, 109, 109);
+            --span-primary-color: rgb(128, 54, 128);
+            --h1-font: 'Rowdies', cursive; 
+        }
+
         * {
             margin: 0 auto;
             padding: 0px;
             box-sizing: border-box;
         }
 
+        body {
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .main {
-            background: lavender;
+            background: var(--primary-color);
         }
 
         .main-picture img {
@@ -22,43 +41,110 @@
             margin-left: auto;
             margin-right: auto;
             border: 3px solid black;
+            margin-top: 20px;
         }
 
         .main-header {
             font-weight: bold;
             text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: var(--h1-font);
+            padding-top: 20px;
+            background: var(--secondary-color);
+            border-bottom: rgb(34, 37, 37) 3px solid;
         }
 
-        .contact-me {
-            font-size: 16px;
-            margin: auto;
-            width: fit-content;
-            padding: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: purple;
-            line-height: 1.5em;
+        /*navigation bar*/
+
+        .space {
+            flex-grow: 1;
+        }
+
+        #nav-bar ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        #nav-bar ul li {
+            color:#333;
+            display: inline-block;
+            padding: 1rem;
+            position: relative; /*the nesting lists will be position absolute*/
+        }
+
+        #nav-bar ul li a {
+            color: black;
+            text-decoration: none;
 
         }
 
-        .link img {
-            margin: 0 auto;
+            /* Hide nested ul by default*/
+
+        #nav-bar ul li ul {
+            display:none;
+        }
+
+        #nav-bar ul li:hover {
+            cursor: pointer;
+            background: var(--primarycolor);
+            color: white
+        }
+        #nav-bar ul li:hover a {
+            color: white
+        }
+
+            /*Nested dropdown show*/
+
+        #nav-bar ul li:hover ul {
             display: block;
+            position: absolute;
+            left:0;
+            width: 200px;
+            margin-top: 1rem ;
         }
 
+        #nav-bar ul li:hover ul li {
+            display: block;
+            background: rgb(179, 169, 169);
+        }
+
+        #nav-bar ul li:hover ul li a {
+            color: black;
+        }
+
+        #nav-bar ul li:hover ul li:hover {
+            background: #e0e0e0;
+            color: inherit;
+        }
+
+        #nav-bar ul li span {
+            background: var(--span-primary-color);
+            color:black;
+            padding: 2px;
+            float: right;
+            border-radius: 5px;
+        }
+
+        /*if I instead want to make the span hover when I stand on the li itself:
+        #nav-bar ul li:hover ul li:hover span*/
+
+        #nav-bar ul li span:hover {
+            color:white;
+            background: rgb(75, 122, 167);
+        }
 
 
         .card {
             font-family: Arial, Helvetica, sans-serif;
             height: fit-content;
             width:fit-content;
-            background: lightskyblue;
+            background: var(--secondary-color);
             box-shadow: 3px 3px 3px black;
             text-align: center;
-            line-height: 1.5em;
+            line-height: 1.4em;
             margin: auto;
             margin-bottom: 10px;
-            border: 3px black;
             padding: 20px;
         }
 
@@ -68,9 +154,34 @@
 
         .card ul {
             list-style: none;
+            font-weight: bold;
         }
 
-        
+        .social-media {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        a {
+            margin: 2px;
+        }
+
+        .space {
+            flex-grow: 1;
+        }
+
+        .contact-me {
+            font-size: 16px;
+            margin: auto;
+            width: fit-content;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            line-height: 1.5em;
+            font-weight: bold;
+        }
+
         
         
     </style>
@@ -80,21 +191,46 @@
     <div class="main"> 
 
         <div class="main-header">
-            <h1>Professional Protfolio - Web developer</h1>
+            <h1>Professional Portfolio - Web Developer</h1>
             <br>
             <h2>Atalia Mucharsky</h2>
             <br>
         </div>
 
-        <!--My picture-->
-        <div class="main-picture">
+        <nav id="nav-bar">
+            
+            <ul>
+                <div class="space"></div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li>Projects <i class="fas fa-angle-down"></i>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Website Design</a></li>
+                        <li><a href="#">Mobile Development</a></li>
+                    </ul>
+                </li>    
+                <li>Blog <i class="fas fa-angle-down"></i>
+                    <ul>
+                        <li><a href="#">HTML</a><span> 22 posts</span></li>
+                        <li><a href="#">CSS</a><span> 12 posts</span></li>
+                        <li><a href="#">JavaScript</a><span> 14 posts</span></li>
+                    </ul>
+                </li>
+                <div class="space"></div>
+            </ul>
+        </nav>
+
+          <!--My picture-->
+          <div class="main-picture">
             <img src="https://scontent.ftlv15-1.fna.fbcdn.net/v/t1.0-9/s960x960/53439590_2195486527447587_1786997198781677568_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=Vq7NJ3Tu6B0AX_56Mox&_nc_ht=scontent.ftlv15-1.fna&_nc_tp=7&oh=d595cbdcbc05950607e08af8c8166c6d&oe=5F44F0A3" alt="Atalia" width="250">
         </div>
         <br>
 
+
         <div class="card">
             <div class="card-title">
-                <h2>Languages & Skills</h2>
+                <h2><i class="fas fa-book-reader"></i> Languages & Skills</h2>
                 <br>
                 <ul>
                     <li>Python</li>
@@ -107,21 +243,24 @@
         <br>
 
         <!--Social media-->
-        
-        <div class="link"><a href="https://www.linkedin.com/in/atalia-mucharsky-a811151b1/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1024px-Linkedin.svg.png" alt="LinkedIn" width="50"> </a></div>
-        <div class="link"><a href="https://github.com/AtaliaM" target="_blank"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6WviecMysi2PSJVP415iWSYud9Su6ytu3oA&usqp=CAU" alt="GitHub" width="50"> </a></div>
-            
+        <div class="social-media">
+            <div class="space"></div>
+            <div><a href="https://www.linkedin.com/in/atalia-mucharsky-a811151b1/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1024px-Linkedin.svg.png" alt="LinkedIn" width="50"> </a></div>
+            <div><a href="https://github.com/AtaliaM" target="_blank"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6WviecMysi2PSJVP415iWSYud9Su6ytu3oA&usqp=CAU" alt="GitHub" width="50"> </a></div>
+            <div class="space"></div>
+        </div>   
         <br>
 
         <div class="contact-me card">
-            <div class="contact-header">Contacting Information:</div>
+            <h3 class="contact-header">Contact Information:</h3>
             <div class="contact-forms">
                 <ul>
-                    <li>Email: atalia.mucharsky@hotmail.com</li>
-                    <li>Phone: 054-6362544</li>
+                    <li><i class="fas fa-envelope"></i> Email: atalia.mucharsky@hotmail.com</li>
+                    <li><i class="fas fa-phone-volume"></i> Phone: 054-6362544</li>
                 </ul>
             </div>
         </div>
+        <br>
 
         
     </div> 
