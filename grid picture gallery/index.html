@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Grid Gallery</title>
+
+    <style>
+        .container {
+          margin: 0;
+          display: grid;
+          grid-template-columns: repeat(auto,1fr);
+          grid-template-rows: repeat(auto,5vh); 
+          grid-gap: 15px;
+          grid-auto-flow: dense;
+          /* grid-template-areas: 
+            'pic-1 pic-1 pic-2 pic-2 pic-2 pic-3 pic-4 pic-4'
+            'pic-5 pic-5 pic-6 pic-6 pic-7 pic-8 pic-8 pic-9'
+            'pic-5 pic-5   '; */
+        }
+
+        img {
+          width:100%;
+          object-fit: cover;
+        }
+
+
+        img:nth-child(1) {
+          
+          grid-column: 1 / span 2;
+          grid-row: 1/ span 2;
+        }
+
+        img:nth-child(2) {
+        
+          grid-column: 3 / span 2;
+          grid-row: 2/ span 2;
+        }
+
+        img:nth-child(3) {
+       
+          grid-column: 5 / span 1;
+          grid-row: 1 / span 2;
+        }
+
+        img:nth-child(4) {
+        
+          grid-column: 5 / span 1;
+          grid-row: 2/ span 2;
+        }
+
+        img:nth-child(5) {
+         
+          grid-column: 1 / span 1;
+          grid-row: 3/ span 1;
+        }
+
+        img:nth-child(6) {
+          
+          grid-column: 1 / span 1;
+          grid-row: 5/ span 1;
+        }
+
+        img:nth-child(7) {
+          
+          grid-column: 2 / span 2;
+          grid-row: 3/ span 2;
+        }
+
+        img:nth-child(8) {
+         
+          grid-column: 2 / span 1;
+          grid-row: 5/ span 1;
+        }
+
+        img:nth-child(9) {
+          
+          grid-column: 4 / span 2;
+          grid-row: 4 / span 2;
+        }
+
+        img:nth-child(10) {
+          
+          grid-column: 1 / span 1;
+          grid-row: 4 / span 1;
+        } 
+
+        img:nth-child(11) {
+          
+          grid-column: 3 / span 1;
+          grid-row: 5 / span 2;
+        }
+
+        img:nth-child(12) {
+          
+          grid-column: 3 / span 1;
+          grid-row: 1 / span 1;
+        }
+
+        img:nth-child(13) {
+          
+          grid-column: 4 / span 2;
+          grid-row: 3 / span 2;
+        }
+
+        img:nth-child(14) {
+          
+          grid-column: 2 / span 1;
+          grid-row: 5 / span 1;
+        }
+
+
+    </style>
+
+  </head>
+
+
+
+  <body>
+
+      <div class="container">
+
+        <img src="./images/gal-1.jpeg" alt="">
+        <img src="./images/gal-2.jpeg" alt="">
+        <img src="./images/gal-3.jpeg" alt="">
+        <img src="./images/gal-4.jpeg" alt="">
+        <img src="./images/gal-5.jpeg" alt="">
+        <img src="./images/gal-6.jpeg" alt="">
+        <img src="./images/gal-7.jpeg" alt="">
+        <img src="./images/gal-8.jpeg" alt="">
+        <img src="./images/gal-9.jpeg" alt="">
+        <img src="./images/gal-10.jpeg" alt="">
+        <img src="./images/gal-11.jpeg" alt="">
+        <img src="./images/gal-12.jpeg" alt="">
+        <img src="./images/gal-13.jpeg" alt="">
+        <img src="./images/gal-14.jpeg" alt="">
+
+      </div>
+
+  </body>
+</html>
