@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificities trial</title>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 500px;
+            background: lightskyblue;
+        }
+
+        #container {
+            background: rgb(94, 94, 38);
+        }
+
+        ul {
+            list-style: none;
+            color:white;
+        }
+
+        ul li {
+            color:violet;
+        }
+
+        .container ul li:nth-child(2) {
+            color:tomato;
+            background: rgb(184, 152, 72);
+        }
+
+        #container ul li:nth-child(even) {
+            color:black;
+            background: cadetblue;
+        }
+
+        /* ul li:nth-child(2) {
+            color:tomato;
+            background: rgb(184, 152, 72);
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <ul>Favorite Animals:
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Lion</li>
+            <li>Tiger</li>
+        </ul>
+
+    </div>
+</body>
+</html>
